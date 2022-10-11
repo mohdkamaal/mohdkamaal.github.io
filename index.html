@@ -505,7 +505,43 @@
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script src="js/scripts.min.js"></script>
+    <script>
+        /* paste this in verbatim */
+        window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
+      
+        /* customize formbutton here*/     
+        formbutton("create", {
+          action: "https://formspree.io/f/xpznrjnj",
+          title: "How can I help you?",
+          fields: [
+            { 
+              type: "email", 
+              label: "Email:", 
+              name: "email",
+              required: true,
+              placeholder: "your@email.com"
+            },
+            {
+              type: "textarea",
+              label: "Message:",
+              name: "message",
+              placeholder: "What's on your mind?",
+            },
+            { type: "submit" }      
+          ],
+          styles: {
+            title: {
+              backgroundColor: "#3498db"
+            },
+            button: {
+              backgroundColor: "#3498db"
+            }
+          },
+          initiallyVisible: true
+        });
+      </script>
 </body>
 
 </html>
